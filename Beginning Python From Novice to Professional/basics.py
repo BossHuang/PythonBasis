@@ -80,4 +80,11 @@ print sqrt(9)
 print
 print
 #############################
+# ''  ""
 
+print "Let's go"
+print '"Hello World", I said'
+
+print "hello "+str(100)
+print "heool "+`100`
+print "heool "+repr(100)
