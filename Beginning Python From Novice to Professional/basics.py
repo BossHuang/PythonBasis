@@ -37,6 +37,47 @@ print 0xAF      #175
 print "Octals"
 print 010       #8
 ##############################
+print
+print
+##############################
+#  get user input
+print "input"
+x = input("x:")
+y = input("y:")
+print x*y
+
+name = input("What is your name?")
+print "Hi "+name
+
+print
+print "raw_input"
+x = raw_input("x:")
+y = raw_input("y:")
+print float(x)*float(y)
+
+name = raw_input("What is your name?")
+print "Hi "+name
+
+print type(raw_input("please input:"))
 
 ##############################
-#
+print
+print
+#############################
+
+# import
+import math
+print math.sqrt(9)
+
+func = math.sqrt
+print func(9)
+
+from cmath import sqrt
+from math import sqrt
+print sqrt(9)
+
+##############################
+print
+print
+#############################
+
