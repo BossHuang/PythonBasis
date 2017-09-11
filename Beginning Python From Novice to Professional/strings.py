@@ -34,5 +34,42 @@ s = "hello,world"
 print s.find("l")
 print s.find("l", 4)
 
+s = ["1","2","3"]
+flag = '+'
+print flag.join(s)
+
+dirs = '','usr','bin'
+print '\\'.join(dirs)
+
+s = "This's a book"
+print s.lower()
+
+import string
+s = "this's a book"
+print s.title()
+print string.capwords(s)
+
+s = "hello, world"
+print s.replace('l', "T")
+
+s = "hello, world"
+print s.split(',')
+print s.split()
+
+s = "  ** hello, world **   "
+print s
+print s.strip()
+print s.strip("*")
+
+import string
+table = string.maketrans("lo","ku")
+s = "hello, world"
+print s.translate(table)
+print s.translate(table, ',')
+
+
+
+
+
 
 
