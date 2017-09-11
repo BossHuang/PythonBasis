@@ -112,7 +112,15 @@ print d
 print c
 
 d = {'age': 10, 'name': 'L'}
+d.update(name= 'X')
+print d
+tems = [('name','L'),('age',11)]
+d.update(tems)
+print d
+
+d = {'age': 10, 'name': 'L'}
 print d.values()
 it = d.itervalues()
 print it
 print list(it)
+
