@@ -55,3 +55,10 @@ print sorted(x)
 print reversed(x)
 
 print [(x,y) for x in range(3) for y in range(3) if x == y]
+
+x = [1,2]
+y = x
+print x,y
+del x
+print y
+# print x
