@@ -62,3 +62,29 @@ print x,y
 del x
 print y
 # print x
+
+# from math import sqrt
+# exec "sqrt = 1"
+# print sqrt
+# print sqrt(4)
+
+from math import sqrt
+scope = {}
+exec "sqrt = 1" in scope
+print scope['sqrt']
+print sqrt(4)
+
+print len(scope)
+print scope.keys()
+
+print eval("3+2")
+
+scope = {}
+scope['x'] = 1
+scope['y'] = 2
+print eval('x+y', scope)
+
+scope = {}
+exec 'x=2' in scope
+print eval('x+1', scope)
+
