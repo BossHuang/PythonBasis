@@ -72,3 +72,35 @@ print hasattr(sun,'say')
 print hasattr(sun, 'look')
 print callable(getattr(sun,'say'))
 print hasattr(getattr(sun, 'say'), '__call__')
+
+class A:
+    def __init__(self, v = 2):
+        self.value = v
+    def hello(self):
+        print "A"
+        print self.value
+
+class B(A):
+    def __init__(self, n = 1):
+        A.__init__(self, 3)
+        self.num = n
+b = B()
+b.hello()
+
+class A(object):
+    def __init__(self, v = 2):
+        self.value = v
+    def hello(self):
+        print "A"
+        print self.value
+
+class B(A):
+    def __init__(self, n = 1):
+        super(B, self).__init__(3)
+        self.num = n
+b = B()
+b.hello()
+
+
+
+
