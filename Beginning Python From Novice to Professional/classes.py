@@ -178,3 +178,71 @@ class A:
 A.cm()
 A.sm()
 
+class Rectangle:
+    def __init__(self):
+        self.width = 0
+        self.height = 0
+    def __setattr__(self, key, value):
+        if key == 'size':
+            self.width, self.height = value
+        else:
+            self.__dict__[key] = value
+    def __getattr__(self, item):
+        if item == 'size':
+            return self.width, self.height
+        else:
+            raise AttributeError
+
+r = Rectangle()
+print r.size
+
+class Fibs:
+    def __init__(self):
+        self.a = 0
+        self.b = 1
+    def next(self):
+        self.a, self.b = self.b, self.a+self.b
+        return self.a
+    def __iter__(self):
+        return self
+
+fibs = Fibs()
+for f in fibs:
+    if f > 10:
+        print f
+        break
+
+it = iter([1,2,3])
+print it.next()
+print it.next()
+
+class TestIterator:
+    def __init__(self):
+        self.v = 0
+    def next(self):
+        self.v += 1
+        if self.v > 5:
+            raise StopIteration
+        return self.v
+    def __iter__(self):
+        return self
+
+tt = TestIterator()
+print list(tt)
+
+def flatten(nested):
+    for sublist in nested:
+        for element in sublist:
+            yield element
+a = [[1,2],[3,4]]
+print flatten(a)
+print list(flatten(a))
+
+def repeater(value):
+    while True:
+        new = (yield value)
+        if new is not None:
+            value = new
+r = repeater(42)
+print r.next()
+print r.send("hello")
