@@ -31,8 +31,8 @@ division(1,0)
 
 def division(x,y):
     try:
-        print "try"
-        return x/y
+        print x/y
+        #return x/y
     except:
         print "except"
     else:
@@ -42,3 +42,15 @@ def division(x,y):
 
 division(1,0)
 division(1,2.0)
+
+def division(x,y):
+    try:
+        return x/y
+    except:
+        if y == 0:
+            print "y can not be zero"
+        else:
+            raise
+
+division(1,0)
+division('1',2)
