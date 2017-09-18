@@ -238,6 +238,11 @@ a = [[1,2],[3,4]]
 print flatten(a)
 print list(flatten(a))
 
+r = (i for i in range(5))
+print r
+print r.next()
+print sum(i for i in range(10))
+
 def repeater(value):
     while True:
         new = (yield value)
