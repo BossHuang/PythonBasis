@@ -51,6 +51,31 @@ b = set([2,3])
 a.add(frozenset(b))
 print a
 
+from heapq import *
+data = [4,1,3,6]
+heap = []
+for num in data:
+    heappush(heap, num)
+print heap
+
+heapify(data)
+print data
+
+from collections import deque
+q = deque(range((3)))
+q.append(5)
+q.appendleft(6)
+print q
+
+print q.pop()
+print q.popleft()
+print q
+
+q.rotate(1)
+print q
+
+q.rotate(-2)
+print q
 
 
 
