@@ -1,30 +1,30 @@
 __author__ = 'leihuang'
 
-# print "---"
-# import Hi
-# print "---"
-# import Hi
-# print "---"
-# Hi = reload(Hi)
-# print "---"
-#
-# import Hi2
-# Hi2.Hello()
-#
-# from HelloWrold import Hello
-# import HelloWrold.World
-#
-# import copy
-# print [n for n in dir(copy) if not n.startswith('_')]
-# print copy.__all__
-#
-# print copy.copy.__doc__
-# help(copy.copy)
+print "---"
+import Hi
+print "---"
+import Hi
+print "---"
+Hi = reload(Hi)
+print "---"
 
-# print range.__doc__
-#
-# import copy
-# print copy.__file__
+import Hi2
+Hi2.Hello()
+
+from HelloWrold import Hello
+import HelloWrold.World
+
+import copy
+print [n for n in dir(copy) if not n.startswith('_')]
+print copy.__all__
+
+print copy.copy.__doc__
+help(copy.copy)
+
+print range.__doc__
+
+import copy
+print copy.__file__
 
 a = set([1,2,3,4])
 b = set([2,3,4,5])
@@ -76,6 +76,7 @@ print q
 
 q.rotate(-2)
 print q
+
 
 
 
