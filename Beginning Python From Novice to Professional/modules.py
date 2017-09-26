@@ -77,6 +77,9 @@ print q
 q.rotate(-2)
 print q
 
+import time
+print time.asctime()
+
 
 
 
