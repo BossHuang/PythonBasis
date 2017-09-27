@@ -112,3 +112,17 @@ s['x'] = temp
 print s['x']
 
 
+import re
+text = "alpha. beta. .... gama delta"
+print re.split('[. ]+', text)
+print re.split('[. ]+', text, maxsplit=2)
+print re.findall('[.?\-",]+', text)
+
+print re.sub("a",'A',text)
+
+import re
+m = re.match(r'www\.(.)*\..{3}','www.baidu.com')
+print m.group(1)
+print m.start(1)
+print m.end(1)
+print m.span(1)
