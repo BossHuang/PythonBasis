@@ -120,8 +120,10 @@ print re.findall('[.?\-",]+', text)
 
 print re.sub("a",'A',text)
 
-import re
+print re.escape("www.baidu.com")
+
 m = re.match(r'www\.(.)*\..{3}','www.baidu.com')
+print m.group(0)
 print m.group(1)
 print m.start(1)
 print m.end(1)
