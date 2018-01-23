@@ -47,6 +47,7 @@ print a
 
 a = [1,2,1,2]
 print a.index(2)
+#print a.index(3)   #error
 
 a = [1,3]
 a.insert(1, 2)
@@ -62,6 +63,7 @@ print a
 a = [1,2,1,2]
 a.remove(2)
 print a
+#a.remove(3)    #error
 
 a = [1,2,3]
 a.reverse()
