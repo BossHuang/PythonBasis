@@ -1,7 +1,7 @@
 __author__ = 'leihuang'
 
 import exceptions
-#print dir(exceptions)
+print dir(exceptions)
 
 class SomeCustomException(Exception):
     pass
