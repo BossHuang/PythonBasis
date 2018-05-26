@@ -2,17 +2,31 @@ __author__ = 'leihuang'
 
 class Resistor(object):
     def __init__(self, ohms):
-        print "Resistor"
+        print "In Resistor"
         self.ohms = ohms
         self.voltage = 0
         self.current = 0
+        print "Out Resistor"
 
 class VoltageResistance(Resistor):
     def __init__(self, ohms):
-        print "VoltageResistance"
+        print "In VoltageResistance"
         super(VoltageResistance, self).__init__(ohms)
-        #self._ohms = ohms
-        #self._voltage = 0
+        print "Out VoltageResistance"
+
+    @property
+    def ohms(self):
+        return self._ohms
+
+    @ohms.setter
+    def ohms(self, ohms):
+        print "In ohms setter"
+        if ohms <= 0:
+            raise ValueError('%f ohms must be > 0' % ohms)
+        if hasattr(self, 'ohms'):
+            raise ArithmeticError("can't set attritube of ohms")
+        self._ohms = ohms
+        print "Out ohms setter"
 
     @property
     def voltage(self):
@@ -23,22 +37,16 @@ class VoltageResistance(Resistor):
         self._voltage = voltage
         self.current = self._voltage/self.ohms
 
-    @property
-    def ohms(self):
-        return self._ohms
-
-    @ohms.setter
-    def ohms(self, ohms):
-        print "1 ohms"
-        if ohms <= 0:
-            raise ValueError('%f ohms must be > 0' % ohms)
-        if hasattr(self, 'ohms'):
-            raise ArithmeticError("can't set attritube of ohms")
-        self._ohms = ohms
 
 
 #v = VoltageResistance(-1)
 
 v = VoltageResistance(5.0)
+
+#v.ohms = 3
+
+print v.current
+v.voltage = 2
+print v.current
 
 
