@@ -44,15 +44,15 @@ start = time.time()
 for _ in range(5):
     get_url_context()
 end = time.time()
-print "without multithreading took %.3f seconds" %(end-start)
+print "without multithreading use %.3f seconds" %(end-start)
 
 start = time.time()
 threads = []
 for _ in range(5):
-    thread = Thread(target=get_url_context())
+    thread = Thread(target=get_url_context, args=())
     thread.start()
     threads.append(thread)
 for thread in threads:
     thread.join()
 end = time.time()
-print "with multithreading took %.3f seconds" %(end-start)
+print "with multithreading use %.3f seconds" %(end-start)
